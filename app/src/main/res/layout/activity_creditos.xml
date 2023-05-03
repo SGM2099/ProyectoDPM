@@ -27,7 +27,7 @@
             android:layout_height="171dp"
             android:layout_weight="1"
             android:contentDescription="logo_unam"
-            app:srcCompat="C:/Users/Pc/Documents/Escuela/UNAM/6semestre/DPM/ProyectoDPM/app/src/main/res/drawable-xxxhdpi/logo_unam.png" />
+            app:srcCompat="@drawable/logo_unam" />
 
         <TextView
             android:layout_width="match_parent"
