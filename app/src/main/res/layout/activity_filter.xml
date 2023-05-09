@@ -57,4 +57,45 @@
         android:src="@mipmap/regreso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/carrousel"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        app:layoutDescription="@xml/activity_filter_scene"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!--<ImageView
+            android:id="@+id/filter_select"
+            android:layout_width="100dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:src="@drawable/filter_select"" />-->
+
+        <ImageView
+            android:id="@+id/filter_left_option"
+            android:layout_width="80dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/filter_option"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filter_right_option" />
+
+        <ImageView
+            android:id="@+id/filter_right_option"
+            android:layout_width="80dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/filter_option"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filter_select" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
