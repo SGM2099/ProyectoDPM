@@ -61,40 +61,69 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/carrousel"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="168dp"
         app:layoutDescription="@xml/activity_filter_scene"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!--<ImageView
-            android:id="@+id/filter_select"
-            android:layout_width="100dp"
-            android:layout_height="96dp"
-            android:layout_gravity="center"
-            android:src="@drawable/filter_select"" />-->
-
         <ImageView
             android:id="@+id/filter_left_option"
-            android:layout_width="80dp"
-            android:layout_height="128dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/filter_option"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
             android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            app:layout_constraintBaseline_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/filter_right_option" />
+            app:layout_constraintEnd_toStartOf="@+id/filter_selected"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/filter_option" />
+
+        <ImageView
+            android:id="@+id/filter_selected"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/filter_option"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/filter_right_option"
-            android:layout_width="80dp"
-            android:layout_height="128dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/filter_option"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
             android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            app:layout_constraintBaseline_toTopOf="parent"
+            android:src="@drawable/filter_option"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/filter_select" />
+            app:layout_constraintStart_toEndOf="@+id/filter_selected"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="100dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="100dp" />
+
+        <androidx.constraintlayout.helper.widget.Carousel
+            android:id="@+id/carousel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:carousel_forwardTransition="@+id/forward"
+            app:carousel_backwardTransition="@+id/backward"
+            app:carousel_previousState="@+id/previous"
+            app:carousel_nextState="@+id/next"
+            app:carousel_infinite="true"
+            app:carousel_firstView="@+id/imageView2"
+            app:constraint_referenced_ids="filter_left_option,filter_selected,filter_right_option" />
 
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
