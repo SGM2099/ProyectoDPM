@@ -1,7 +1,7 @@
 package mx.unam.fciencias.moviles.proyectoar;
 
 import android.Manifest;
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -80,10 +80,13 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     private File videoFileName;
 
+    private String tag = "ARView";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i(tag, "Activity Created");
     }
 
     @Override
@@ -94,30 +97,38 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
             ActivityCompat.requestPermissions(this, new String[]{ Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO },
                     1);
+            Log.i(tag, "Permision not granted");
         } else {
             // Permission has already been granted
             initialize();
+            Log.i(tag ,"Initialize with permision granted");
         }
         super.onStart();
+        Log.i(tag, "Activity Started");
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onRequestPermissionsResult(int requestCode,  String[] permissions, int[] grantResults) {
         if (requestCode == 1 && grantResults.length > 0) {
             for (int grantResult : grantResults) {
                 if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                    initialize();
                     return; // no permission
                 }
             }
             initialize();
         }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     private void initialize() {
+        Log.i(tag, "Initializing");
         initializeDeepAR();
+        Log.i(tag, "DeepAR initialize");
         initializeFilters();
-        initalizeViews();
+        Log.i(tag, "Filters initialize");
+        initializeViews();
+        Log.i(tag, "Finish Initializing");
     }
 
     private void initializeFilters() {
@@ -142,9 +153,12 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         effects.add("burning_effect.deepar");
         effects.add("Elephant_Trunk.deepar");
 
+
+        Log.i(tag, "List View Initialize");
+
     }
 
-    private void initalizeViews() {
+    private void initializeViews() {
         ImageButton previousMask = findViewById(R.id.previousMask);
         ImageButton nextMask = findViewById(R.id.nextMask);
 
@@ -323,10 +337,13 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         return orientation;
     }
     private void initializeDeepAR() {
+        Log.i(tag, "Staring DeepAR");
         deepAR = new DeepAR(this);
-        deepAR.setLicenseKey("62c521724574387d7c2f4a99ed74ee094631aeec51e203bc0a3ee2af7629e78c7ecb13a9e2599772");
+        deepAR.setLicenseKey(BuildConfig.deepar_api_key);
+        Log.i(tag, BuildConfig.deepar_api_key);
         deepAR.initialize(this, this);
         setupCamera();
+        Log.i(tag, "DeepAR has been Started");
     }
 
     private void setupCamera() {
@@ -475,11 +492,13 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private void gotoNext() {
         currentEffect = (currentEffect + 1) % effects.size();
         deepAR.switchEffect("effect", getFilterPath(effects.get(currentEffect)));
+        Log.i(tag, String.format("Next filter to apply %s", effects.get(currentEffect)));
     }
 
     private void gotoPrevious() {
         currentEffect = (currentEffect - 1 + effects.size()) % effects.size();
         deepAR.switchEffect("effect", getFilterPath(effects.get(currentEffect)));
+        Log.i(tag, String.format("Previous filter to apply %s", effects.get(currentEffect)));
     }
 
     @Override
