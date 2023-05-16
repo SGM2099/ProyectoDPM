@@ -92,36 +92,35 @@
 
     <ConstraintSet android:id="@+id/next">
         <Constraint
+            android:id="@+id/filter_right_option"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/filter_left_option"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/imageView2"
-            motion:layout_constraintEnd_toStartOf="@id/guideline"
-            android:layout_marginRight="16dp"
-            android:layout_marginEnd="16dp" />
-        <Constraint
-            android:id="@+id/imageView3"
-            motion:layout_constraintStart_toEndOf="@id/guideline"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="16dp"
-            motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintEnd_toStartOf="@id/guideline2"
-            android:layout_marginEnd="16dp"
-            motion:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/filter_right_option"
+            motion:layout_constraintTop_toTopOf="parent"/>
         <Constraint
-            android:id="@+id/imageView4"
-            motion:layout_constraintStart_toEndOf="@id/guideline2"
+            android:id="@+id/filter_selected"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="16dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="16dp"
-            motion:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="16dp" />
+            motion:layout_constraintEnd_toStartOf="@+id/filter_right_option"
+            motion:layout_constraintTop_toTopOf="parent" />
 
     </ConstraintSet>
 
