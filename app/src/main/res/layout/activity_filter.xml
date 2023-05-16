@@ -66,6 +66,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
+            android:src="@drawable/filter_option"
             android:id="@+id/filter_left_option"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -73,15 +74,14 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/filter_selected"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/filter_option" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:src="@drawable/filter_option"
             android:id="@+id/filter_selected"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/filter_option"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -89,12 +89,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:src="@drawable/filter_option"
             android:id="@+id/filter_right_option"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/filter_option"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/filter_selected"
             app:layout_constraintTop_toTopOf="parent" />
