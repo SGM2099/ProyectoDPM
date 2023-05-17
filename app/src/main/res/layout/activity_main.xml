@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
     tools:context=".FilterActivity">
 
     <SurfaceView
@@ -18,6 +17,18 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
+
+        <ImageButton
+            android:id="@+id/popupMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/menu"
+            android:onClick="showPopup"/>
 
         <ImageButton
             android:id="@+id/recordButton"
@@ -112,10 +123,6 @@
             android:requiresFadingEdge="horizontal"
             android:text="  Record  "
             android:textAlignment="center" />
-
-
-
-
 
     </RelativeLayout>
 
