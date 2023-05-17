@@ -49,7 +49,7 @@ import ai.deepar.ar.CameraResolutionPreset;
 import ai.deepar.ar.DeepAR;
 import ai.deepar.ar.DeepARImageFormat;
 
-public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, AREventListener {
+public class FilterActivity extends AppCompatActivity implements SurfaceHolder.Callback, AREventListener {
 
     // Default camera lens value, change to CameraSelector.LENS_FACING_BACK to initialize with back camera
     private int defaultLensFacing = CameraSelector.LENS_FACING_FRONT;
@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private void initializeFilters() {
         effects = new ArrayList<>();
         effects.add("none");
+        effects.add("PruebaDispositivos.deepar");
         effects.add("viking_helmet.deepar");
         effects.add("MakeupLook.deepar");
         effects.add("Split_View_Look.deepar");
@@ -152,8 +153,6 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         effects.add("Fire_Effect.deepar");
         effects.add("burning_effect.deepar");
         effects.add("Elephant_Trunk.deepar");
-
-
         Log.i(tag, "List View Initialize");
 
     }
@@ -565,8 +564,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
             outputStream.flush();
             outputStream.close();
-            MediaScannerConnection.scanFile(MainActivity.this, new String[]{imageFile.toString()}, null, null);
-            Toast.makeText(MainActivity.this, "Screenshot " + imageFile.getName() + " saved.", Toast.LENGTH_SHORT).show();
+            MediaScannerConnection.scanFile(FilterActivity.this, new String[]{imageFile.toString()}, null, null);
+            Toast.makeText(FilterActivity.this, "Screenshot " + imageFile.getName() + " saved.", Toast.LENGTH_SHORT).show();
         } catch (Throwable e) {
             e.printStackTrace();
         }
