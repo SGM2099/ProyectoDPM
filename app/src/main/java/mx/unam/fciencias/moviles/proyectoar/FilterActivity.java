@@ -19,6 +19,7 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -87,6 +88,8 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
 
     private ImageButton imageButton;
 
+    private DialogoPersonalizado dialogoPersonalizado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,6 +121,18 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
                 });
             }
         });
+
+        Button button = findViewById(R.id.show_dialog_bttn);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                mostrarDialogo();
+            }
+
+        });
+
+        mostrarDialogo();
 
     }
 
@@ -643,4 +658,14 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
     public void effectSwitched(String s) {
 
     }
+
+    private void mostrarDialogo(){
+
+        if (dialogoPersonalizado == null)
+            dialogoPersonalizado = new DialogoPersonalizado();
+
+        dialogoPersonalizado.show(getSupportFragmentManager(), "POP-UP");
+
+    }
+
 }

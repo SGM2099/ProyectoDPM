@@ -10,6 +10,12 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="button_show_dialog">Mostrar Dialogo</string>
+
+    <string name="bienvenida">Bienvenido</string>
+    <string name="entendido">Entendido</string>
+    <string name="after_dialog">Falta Texto</string>
+    
     <string name="lorem_ipsum_short">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
