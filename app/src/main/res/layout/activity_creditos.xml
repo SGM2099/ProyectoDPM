@@ -16,6 +16,15 @@
             android:layout_gravity="center_vertical"
             android:orientation="vertical">
 
+            <ImageButton
+                android:id="@+id/popupMenu"
+                android:layout_width="56dp"
+                android:layout_height="52dp"
+                android:layout_gravity="left"
+                android:onClick="showPopup"
+                android:scaleType="centerInside"
+                android:src="@mipmap/menu" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
