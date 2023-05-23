@@ -185,8 +185,8 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
     private void initializeFilters() {
         effects = new ArrayList<>();
         effects.add("none");
-        effects.add("PruebaDispositivos.deepar");
         effects.add("lupus_eritematoso.deepar");
+        effects.add("ictericia.deepar");
         Log.i(tag, "List View Initialize");
 
     }
