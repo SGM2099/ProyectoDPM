@@ -28,6 +28,8 @@ public class Creditos extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.select_filter:
+                                Intent intent = new Intent(Creditos.this, FilterActivity.class);
+                                startActivity(intent);
                                 return true;
                             case R.id.info_filter:
                                 Intent intentFilter = new Intent(Creditos.this, Informacion.class);
@@ -42,6 +44,7 @@ public class Creditos extends AppCompatActivity {
                         }
                     }
                 });
+                popupMenu.show();
             }
         });
 

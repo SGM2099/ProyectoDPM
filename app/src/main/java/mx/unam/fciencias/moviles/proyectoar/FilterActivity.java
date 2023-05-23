@@ -100,6 +100,7 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.i(tag, "Menu Click");
                 PopupMenu popupMenu = new PopupMenu(FilterActivity.this, imageButton);
                 popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -121,6 +122,7 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
                         }
                     }
                 });
+                popupMenu.show();
             }
         });
 
@@ -228,11 +230,13 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
             }
         });
 
-        ImageButton openActivity = findViewById(R.id.openActivity);
+        ImageButton openActivity = findViewById(R.id.info_filter_button);
         openActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("Info", "Open Activity Click");
+                Log.i("Info", "Open Filter Info");
+                Intent intentFilter = new Intent(FilterActivity.this, Informacion.class);
+                startActivity(intentFilter);
             }
         });
 

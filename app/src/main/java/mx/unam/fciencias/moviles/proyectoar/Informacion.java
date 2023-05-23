@@ -29,6 +29,8 @@ public class Informacion extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.select_filter:
+                                Intent intent = new Intent(Informacion.this, FilterActivity.class);
+                                startActivity(intent);
                                 return true;
                             case R.id.info_filter:
                                 Intent intentFilter = new Intent(Informacion.this, Informacion.class);
@@ -43,6 +45,7 @@ public class Informacion extends AppCompatActivity {
                         }
                     }
                 });
+                popupMenu.show();
             }
         });
 
