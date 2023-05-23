@@ -90,6 +90,8 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
 
     private DialogoPersonalizado dialogoPersonalizado;
 
+    private boolean shwowedPopUp = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,17 +124,10 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
             }
         });
 
-        Button button = findViewById(R.id.show_dialog_bttn);
-        button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                mostrarDialogo();
-            }
-
-        });
-
-        mostrarDialogo();
+        if (!shwowedPopUp) {
+            mostrarDialogo();
+            shwowedPopUp = true;
+        }
 
         ImageButton infoButton = findViewById(R.id.info_filter_button);
         infoButton.setOnClickListener(new View.OnClickListener() {

@@ -17,7 +17,7 @@ public class Creditos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creditos);
 
-        imageButton = (ImageButton) findViewById(R.id.popupMenu);
+        imageButton = findViewById(R.id.popupMenu);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
