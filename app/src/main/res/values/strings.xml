@@ -12,9 +12,14 @@
 
     <string name="button_show_dialog">Mostrar Dialogo</string>
 
-    <string name="bienvenida">Bienvenido</string>
+    <string name="bienvenida">
+        MediAR es un aplicación móvil con carácter médico-eduacativo que busca apoyarte a ti
+        estudiante de medicina, en la identificación de enfermedades y condiciones que afecten la
+        facie de una persona mediante el uso de filtros faciales que te permitan observar diferentes
+        tipos de condiciones y/o enfermedades aplicadas a ti mismo o a otra persona
+    </string>
     <string name="entendido">Entendido</string>
-    <string name="after_dialog">Falta Texto</string>
+    <string name="after_dialog">Bienvenido</string>
     
     <string name="lorem_ipsum_short">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
