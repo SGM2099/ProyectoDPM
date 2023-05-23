@@ -31,10 +31,6 @@ public class Creditos extends AppCompatActivity {
                                 Intent intent = new Intent(Creditos.this, FilterActivity.class);
                                 startActivity(intent);
                                 return true;
-                            case R.id.info_filter:
-                                Intent intentFilter = new Intent(Creditos.this, Informacion.class);
-                                startActivity(intentFilter);
-                                return true;
                             case R.id.credits:
                                 Intent intentCredits = new Intent(Creditos.this, Creditos.class);
                                 startActivity(intentCredits);

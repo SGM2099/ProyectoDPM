@@ -109,10 +109,6 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
                         switch (menuItem.getItemId()) {
                             case R.id.select_filter:
                                 return true;
-                            case R.id.info_filter:
-                                Intent intentFilter = new Intent(FilterActivity.this, Informacion.class);
-                                startActivity(intentFilter);
-                                return true;
                             case R.id.credits:
                                 Intent intentCredits = new Intent(FilterActivity.this, Creditos.class);
                                 startActivity(intentCredits);

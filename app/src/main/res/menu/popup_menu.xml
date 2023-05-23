@@ -4,9 +4,6 @@
         android:id="@+id/select_filter"
         android:title="Seleccionar filtro" />
     <item
-        android:id="@+id/info_filter"
-        android:title="Información sobre filtros" />
-    <item
         android:id="@+id/credits"
         android:title="Créditos" />
 </menu>
