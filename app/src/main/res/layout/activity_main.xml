@@ -67,7 +67,7 @@
             android:layout_marginEnd="5dp"
             android:background="@null"
             android:scaleType="centerInside"
-            android:src="@drawable/open_new_activity" />
+            android:src="@drawable/info" />
 
 
         <ImageButton
