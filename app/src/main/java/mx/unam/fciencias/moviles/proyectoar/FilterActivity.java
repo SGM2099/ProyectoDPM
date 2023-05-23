@@ -134,6 +134,15 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
 
         mostrarDialogo();
 
+        ImageButton infoButton = findViewById(R.id.info_filter_button);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FilterActivity.this, Informacion.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
