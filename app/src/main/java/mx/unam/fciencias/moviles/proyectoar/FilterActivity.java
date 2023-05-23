@@ -129,14 +129,7 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
             shwowedPopUp = true;
         }
 
-        ImageButton infoButton = findViewById(R.id.info_filter_button);
-        infoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(FilterActivity.this, Informacion.class);
-                startActivity(intent);
-            }
-        });
+
 
     }
 
@@ -236,6 +229,9 @@ public class FilterActivity extends AppCompatActivity implements SurfaceHolder.C
             public void onClick(View v) {
                 Log.i("Info", "Open Filter Info");
                 Intent intentFilter = new Intent(FilterActivity.this, Informacion.class);
+                Bundle b = new Bundle();
+                b.putString("Filter", effects.get(currentEffect));
+                intentFilter.putExtras(b);
                 startActivity(intentFilter);
             }
         });
