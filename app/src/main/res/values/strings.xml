@@ -10,6 +10,25 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="button_show_dialog">Mostrar Dialogo</string>
+
+    <string name="bienvenida">
+        MediAR es un aplicación móvil con carácter médico-eduacativo que busca apoyarte a ti
+        estudiante de medicina, en la identificación de enfermedades y condiciones que afecten la
+        facie de una persona mediante el uso de filtros faciales que te permitan observar diferentes
+        tipos de condiciones y/o enfermedades aplicadas a ti mismo o a otra persona
+    </string>
+    <string name="entendido">Entendido</string>
+    <string name="after_dialog">Bienvenido</string>
+    
+    <string name="lorem_ipsum_short">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+    </string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -46,6 +65,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="info_title">Ictericia</string>
+
     <string name="title_credits">Créditos</string>
     <string name="subtitle_idea_credits">Idea Original</string>
     <string name="idea_owner_credits">Dra. E. Mahuina Campos Castolo</string>
@@ -54,5 +75,26 @@
         Gutiérrez Medina Sebastián Alejandro\n
         Cervantes López Aarón\n
         Ricardo Emiliano Apodaca Cardiel
+    </string>
+    <string name="lupus">Enfermedad crónica y autoinmune que puede afectar múltiples órganos
+        y sistemas del cuerpo. El sistema inmunológico del cuerpo, que normalmente protege
+        contra sustancias extrañas y enfermedades, se vuelve hiperactivo y ataca erróneamente
+        tejidos sanos.\n\n
+        Existen diferentes formas de lupus, pero el más común es el lupus
+        eritematoso sistémico (LES). Algunos de los síntomas más frecuentes del LES incluyen
+        fatiga, dolor en las articulaciones, inflamación de las articulaciones, erupciones
+        cutáneas en forma de mariposa en el rostro, fiebre, pérdida de cabello, úlceras bucales
+        y sensibilidad al sol. También puede afectar órganos internos como el corazón, los riñones,
+        los pulmones y el cerebro.
+    </string>
+    <string name="ictericia">La ictericia es una condición médica caracterizada por la coloración
+        amarillenta de la piel, las mucosas (como los ojos) y otros tejidos del cuerpo.
+        Esta coloración amarilla es causada por un exceso de bilirrubina, un pigmento de color
+        amarillo que se produce como resultado de la descomposición de los glóbulos rojos en el
+        cuerpo.\n\n
+        La bilirrubina es normalmente procesada por el hígado y luego excretada en la bilis,
+        que es un líquido producido por el hígado y almacenado en la vesícula biliar. Sin embargo,
+        cuando hay un problema en el proceso de metabolismo o excreción de la bilirrubina,
+        puede acumularse en el cuerpo, lo que resulta en la ictericia.
     </string>
 </resources>

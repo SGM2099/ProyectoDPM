@@ -4,57 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
     tools:context=".FilterActivity">
 
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/surface"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@mipmap/menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="276dp"
-        android:src="@mipmap/filtrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageButton
+            android:id="@+id/popupMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:focusable="true"
+            android:clickable="true"
+            android:src="@mipmap/menu" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:src="@mipmap/pregunta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageButton
+            android:id="@+id/recordButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/record_selector" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="220dp"
-        android:src="@mipmap/camara"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageButton
+            android:id="@+id/switchCamera"
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="220dp"
-        android:src="@mipmap/regreso"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/camera_white" />
+
+
+        <ImageButton
+            android:id="@+id/info_filter_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/info"
+            />
+
+
+        <ImageButton
+            android:id="@+id/nextMask"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right" />
+
+        <ImageButton
+            android:id="@+id/previousMask"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/screenshotModeButton"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_above="@id/recordButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/rounded_corners"
+            android:clickable="true"
+            android:elegantTextHeight="true"
+            android:fadingEdgeLength="56dp"
+            android:requiresFadingEdge="vertical"
+            android:text="  Screenshot  "
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/recordModeButton"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_above="@id/recordButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/rounded_corners"
+            android:clickable="true"
+            android:elegantTextHeight="true"
+            android:fadingEdgeLength="32dp"
+            android:requiresFadingEdge="horizontal"
+            android:text="  Record  "
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
